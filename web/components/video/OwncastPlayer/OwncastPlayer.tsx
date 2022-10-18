@@ -210,7 +210,7 @@ export const OwncastPlayer: FC<OwncastPlayerProps> = ({ source, online }) => {
     controls: true,
     responsive: true,
     fluid: false,
-    playsInline: true,
+    playsinline: true,
     liveui: true,
     preload: 'auto',
     controlBar: {
@@ -291,6 +291,7 @@ export const OwncastPlayer: FC<OwncastPlayerProps> = ({ source, online }) => {
   useEffect(
     () => () => {
       stopLatencyCompensator();
+      playbackMetrics.stop();
     },
     [],
   );

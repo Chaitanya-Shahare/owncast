@@ -7,6 +7,9 @@ on:
   push:
     paths:
       - web/**
+  pull_request_target:
+    paths:
+      - web/**
 
 # List of jobs
 jobs:
@@ -43,5 +46,5 @@ jobs:
         with:
           workingDir: web
           autoAcceptChanges: webv2
-          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          projectToken: f47410569b62
           onlyChanged: true
